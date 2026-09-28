@@ -170,3 +170,29 @@ erp_arReceivable_select<- function(erp_token) {
 }
 
 
+
+
+
+
+
+#'  更新销售订单号
+#'
+#' @param token
+
+#' @param erp_token
+#'
+#' @return 无返回值
+#' @export
+#'
+#' @examples
+#' erp_arReceivable_orderno_update()
+erp_arReceivable_orderno_update<- function(erp_token) {
+
+  sql=paste0("exec rds_proc_ar_receivable_orderno_update ")
+
+  res=tsda::sql_update2(token = erp_token,sql_str =sql )
+  return(res)
+}
+
+
+
